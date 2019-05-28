@@ -1,0 +1,315 @@
+#!/bin/bash
+clear
+#BANNER
+setterm -foreground yellow
+echo "                   ___                                 "
+echo "                 ./   '                                "
+echo "             _.- /  |  \                               "
+echo "          _.-´   |  /  0'-.                            "
+echo " |\    .-´       '--'   .__;=====================-.    "
+echo " \ .-./        .___.--._)=========================|    "
+echo "  \            .       |                          |    "
+echo "   |     /,_.-/        |     creado por el        |    "
+echo " _/   _. (             |     grupo de desarrollo  |    "
+echo "/   -  \  \            |     ERROR404..           |    "
+echo "\  \    '-'            |                          |    "
+echo " '-'                   .--------------------------.    "
+#menu 
+setterm -foreground white
+echo ""
+echo "1) Sacar Metadatos de un archivo en imagen" #EXIFTOOL
+echo "2) Professional Detective Mode" # autopsy
+echo "3) Analizar disco con datos eliminados" #foremost
+echo "4) Extraes datos digitales de muestra de memoria volátil (RAM) 64bit 32bit (ANALISIS DE MALWARE)" # volatility
+echo "5) Analizar memoria MAC OS X Intel x86 IA-32e" # volafox
+echo "6) Sacar datos relevantes como : Tarjetas de creditos. Datos, URL etc." #galleta
+echo "7) Analizar PDF para saber si es dañino o no " #peepdf
+echo "0) Salir"
+echo ""
+setterm -foreground yellow
+read -p "Detective: " menu
+case $menu in
+1)
+clear
+#BANNER
+setterm -foreground yellow
+echo "                   ___                                 "
+echo "                 ./   '                                "
+echo "             _.- /  |  \                               "
+echo "          _.-´   |  /  0'-.                            "
+echo " |\    .-´       '--'   .__;=====================-.    "
+echo " \ .-./        .___.--._)=========================|    "
+echo "  \            .       |                          |    "
+echo "   |     /,_.-/        |     creado por el        |    "
+echo " _/   _. (             |     grupo de desarrollo  |    "
+echo "/   -  \  \            |     ERROR404..           |    "
+echo "\  \    '-'            |                          |    "
+echo " '-'                   .--------------------------.    "
+echo ""
+setterm -foreground white
+echo "ExifTool es un programa de software gratuito y de código abierto para leer,"
+echo "escribir y manipular metadatos de imágenes, audio, video y PDF. "
+echo "Es una plataforma independiente, disponible como biblioteca de Perl y" 
+echo "como aplicación de línea de comandos."
+setterm -foreground yellow
+read -p "Dejame analizar tu archivo. Solo dime como se llama: " nombre
+xterm -hold -e exiftool $nombre
+setterm -foreground white
+echo ""
+echo "Gracias por utilizar Detecive404"
+;;
+2)
+clear
+#BANNER
+setterm -foreground yellow
+echo "                   ___                                 "
+echo "                 ./   '                                "
+echo "             _.- /  |  \                               "
+echo "          _.-´   |  /  0'-.                            "
+echo " |\    .-´       '--'   .__;=====================-.    "
+echo " \ .-./        .___.--._)=========================|    "
+echo "  \            .       |                          |    "
+echo "   |     /,_.-/        |     creado por el        |    "
+echo " _/   _. (             |     grupo de desarrollo  |    "
+echo "/   -  \  \            |     ERROR404..           |    "
+echo "\  \    '-'            |                          |    "
+echo " '-'                   .--------------------------.    "
+setterm -foreground white
+echo ""
+echo "Autopsy es un software informático que simplifica la implementación de muchos "
+echo "de los programas y complementos de código abierto utilizados en The Sleuth Kit."
+echo ""
+setterm -foreground yellow
+echo "Te dejamos autopsy para vos..."
+echo ""
+sleep 10
+xterm -hold -e autopsy
+setterm -foreground white
+echo "Gracias por utilizar Detecive404"
+;;
+3)
+clear
+#BANNER
+setterm -foreground yellow
+echo "                   ___                                 "
+echo "                 ./   '                                "
+echo "             _.- /  |  \                               "
+echo "          _.-´   |  /  0'-.                            "
+echo " |\    .-´       '--'   .__;=====================-.    "
+echo " \ .-./        .___.--._)=========================|    "
+echo "  \            .       |                          |    "
+echo "   |     /,_.-/        |     creado por el        |    "
+echo " _/   _. (             |     grupo de desarrollo  |    "
+echo "/   -  \  \            |     ERROR404..           |    "
+echo "\  \    '-'            |                          |    "
+echo " '-'                   .--------------------------.    "
+echo ""
+setterm -foreground white
+echo ""
+echo "Foremost es un programa forense de recuperación de datos para Linux "
+echo "que se utiliza para recuperar archivos mediante sus encabezados," 
+echo "pies de página y estructuras de datos a través de un proceso conocido como talla de archivos."
+echo ""
+setterm -foreground yellow
+read -p "Nombre de tu USB o DISCO DURO: " entrada
+read -p "¿Donde se va guardar lo encontrado?: " ruta
+xterm -hold -e foremost -V -t all -i $entrada -o $ruta
+echo ""
+setterm -foreground white
+echo "Gracias por utilizar Detecive404"
+;;
+4)
+clear
+#BANNER
+setterm -foreground yellow
+echo "                   ___                                 "
+echo "                 ./   '                                "
+echo "             _.- /  |  \                               "
+echo "          _.-´   |  /  0'-.                            "
+echo " |\    .-´       '--'   .__;=====================-.    "
+echo " \ .-./        .___.--._)=========================|    "
+echo "  \            .       |                          |    "
+echo "   |     /,_.-/        |     creado por el        |    "
+echo " _/   _. (             |     grupo de desarrollo  |    "
+echo "/   -  \  \            |     ERROR404..           |    "
+echo "\  \    '-'            |                          |    "
+echo " '-'                   .--------------------------.    "
+echo ""
+setterm -foreground white
+echo ""
+echo "La volatilidad es un marco forense de memoria de código abierto para la respuesta a "
+echo "incidentes y el análisis de malware. Está escrito en Python y es compatible con Microsoft Windows, Mac OS "
+echo ""
+setterm -foreground yellow
+echo "Detective404"
+setterm -foreground white
+echo ""
+echo "{1} Saber el nombre del perfil con el que vamos a trabajar"
+echo "{2} Saber servicios activos en el momento"
+echo "{3} Conexiones remotas en el momento de volcado de memoria"
+echo "{4} Procesos ejecutando en el momento del acto"
+echo "{5} Saber si algun programa se ejecuto dentro de la terminal o CMD"
+echo "{6} Saber puertos y demas."
+echo "{7} Entrada y registro de Virus o malware"
+echo ""
+setterm -foreground yellow
+read -p "Detective404 > " f
+case $f in
+1)
+echo ""
+read -p "¿Como se llama tu disco duro?: " nombreDELdiscoDURO
+xterm -hold -e volatility imageinfo -f $nombreDELdiscoDURO
+echo ""
+setterm -foreground white
+echo "Gracias por utilizar Detecive404"
+;;
+2)
+echo ""
+read -p "¿Como es el nombre dle perfil?: " NombreDELperfil
+read -p "¿Como se llama tu disco duro?: " nombreDELdiscoDURO
+xterm -hold -e volatility --profile=$nombreDELperfil -f $nombreDELdiscoDURO pslist
+echo ""
+setterm -foreground white
+echo "Gracias por utilizar Detecive404"
+;;
+3)
+echo ""
+read -p "¿Como es el nombre dle perfil?: " NombreDELperfil
+read -p "¿Como se llama tu disco duro?: " nombreDELdiscoDURO
+xterm -hold -e volatility --profile=$nombreDELperfil -f $nombreDELdiscoDURO connscan
+echo ""
+setterm -foreground white
+echo "Gracias por utilizar Detecive404"
+;;
+4)
+echo ""
+read -p "¿Como es el nombre dle perfil?: " NombreDELperfil
+read -p "¿Como se llama tu disco duro?: " nombreDELdiscoDURO
+xterm -hold -e volatility --profile=$nombreDELperfil -f $nombreDELdiscoDURO pstree
+echo ""
+setterm -foreground white
+echo "Gracias por utilizar Detecive404"
+;;
+5)
+echo ""
+read -p "¿Como es el nombre dle perfil?: " NombreDELperfil
+read -p "¿Como se llama tu disco duro?: " nombreDELdiscoDURO
+xterm -hold -e volatility --profile=$nombreDELperfil -f $nombreDELdiscoDURO consoles
+echo ""
+setterm -foreground white
+echo "Gracias por utilizar Detecive404"
+;;
+6)
+echo ""
+read -p "¿Como es el nombre dle perfil?: " NombreDELperfil
+read -p "¿Como se llama tu disco duro?: " nombreDELdiscoDURO
+xterm -hold -e volatility --profile=$nombreDELperfil -f $nombreDELdiscoDURO sockets
+echo ""
+setterm -foreground white
+echo "Gracias por utilizar Detecive404"
+;;
+7)
+echo ""
+read -p "¿Como es el nombre dle perfil?: " NombreDELperfil
+read -p "Nombre a escanear: " nombreAescanear
+xterm -hold -e volatiliy -f $nombreDELperfil printkey -K nombreAescanear
+echo ""
+setterm -foreground white
+echo "Gracias por utilizar Detecive404"
+;;
+esac
+;;
+5)
+clear
+#BANNER
+setterm -foreground yellow
+echo "                   ___                                 "
+echo "                 ./   '                                "
+echo "             _.- /  |  \                               "
+echo "          _.-´   |  /  0'-.                            "
+echo " |\    .-´       '--'   .__;=====================-.    "
+echo " \ .-./        .___.--._)=========================|    "
+echo "  \            .       |                          |    "
+echo "   |     /,_.-/        |     creado por el        |    "
+echo " _/   _. (             |     grupo de desarrollo  |    "
+echo "/   -  \  \            |     ERROR404..           |    "
+echo "\  \    '-'            |                          |    "
+echo " '-'                   .--------------------------.    "
+setterm -foreground white
+echo ""
+########################################################################################
+;;
+6)
+clear
+#BANNER
+setterm -foreground yellow
+echo "                   ___                                 "
+echo "                 ./   '                                "
+echo "             _.- /  |  \                               "
+echo "          _.-´   |  /  0'-.                            "
+echo " |\    .-´       '--'   .__;=====================-.    "
+echo " \ .-./        .___.--._)=========================|    "
+echo "  \            .       |                          |    "
+echo "   |     /,_.-/        |     creado por el        |    "
+echo " _/   _. (             |     grupo de desarrollo  |    "
+echo "/   -  \  \            |     ERROR404..           |    "
+echo "\  \    '-'            |                          |    "
+echo " '-'                   .--------------------------.    "
+setterm -foreground white
+echo ""
+echo "Galleta es una herramienta forense que examina el contenido de los archivos de cookies "
+echo "producidos por Microsofts Internet Explorer. Analiza el archivo y genera un campo separado"
+echo "que se puede cargar en una hoja de cálculo."
+echo ""
+setterm -foreground yellow
+read -p "Nombre de tu archivo: " nombreDELarchivo
+xterm -hold -e galleta nombreDELarchivo > /root/Escritorio/galletita.txt
+echo ""
+setterm -foreground white
+echo "Gracias por utilizar Detecive404"
+;;
+7)
+clear
+setterm -foreground cyan
+echo "vamos actualizar la herramienta.."
+sleep 1
+setterm -foreground white
+peepdf -u
+sleep 4
+settermr -foreground cyan
+echo "Ya casi termina..."
+echo ""
+sleep 3
+echo "Listo."
+clear
+#BANNER
+setterm -foreground yellow
+echo "                   ___                                 "
+echo "                 ./   '                                "
+echo "             _.- /  |  \                               "
+echo "          _.-´   |  /  0'-.                            "
+echo " |\    .-´       '--'   .__;=====================-.    "
+echo " \ .-./        .___.--._)=========================|    "
+echo "  \            .       |                          |    "
+echo "   |     /,_.-/        |     creado por el        |    "
+echo " _/   _. (             |     grupo de desarrollo  |    "
+echo "/   -  \  \            |     ERROR404..           |    "
+echo "\  \    '-'            |                          |    "
+echo " '-'                   .--------------------------.    "
+echo ""
+setterm -foreground white
+echo ""
+echo "peepdf es una herramienta de Python para explorar archivos PDF" 
+echo "con el fin de averiguar si el archivo puede ser dañino o no. "
+echo ""
+setterm -foreground yellow
+read -p "Decime la ruta de tu pdf: " ruta
+xterm -hold -e peepdf -x $ruta
+echo ""
+setterm -foreground white
+echo "Gracias por utilizar Detecive404"
+;;
+0)
+exit
+;;
+esac
