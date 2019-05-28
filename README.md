@@ -11,19 +11,4 @@ Twitter Origen: https: // Twitter.com / Error404origen
 Github: https://github.com/error404-notfound
 Paypal: https://www.paypal.me/error404notjavic
 Youtube: https: // www.youtube .com / error404notfound</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img src="https://github.com/error404-notfound/Detective404/blob/master/detective404.png">
