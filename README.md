@@ -1,7 +1,7 @@
 # Detective404
 análisis forense
 <p>Este script creado por el grupo de desarrollo de ERROR404 viene con un conjunto de herramientas para análisis forense que estan pre instaladas en el sistema operativo Kali linux / ParrotOS Automatiza el analisis forense para la recuperacion en análisis informaticos. demostrando como con una foto podes sacar datos muy importantes de un usuario  al que estamos trabajando.</p>
-
+<img src="https://github.com/error404-notfound/Detective404/blob/master/detective404.png">
 <h1>Nuestras redes sociales</h1>
 <br>
 <p>Facebook: https://www.facebook.com/error4o4.org
@@ -11,4 +11,4 @@ Twitter Origen: https: // Twitter.com / Error404origen
 Github: https://github.com/error404-notfound
 Paypal: https://www.paypal.me/error404notjavic
 Youtube: https: // www.youtube .com / error404notfound</p>
-<img src="https://github.com/error404-notfound/Detective404/blob/master/detective404.png">
+<h1>Compartelo y danos una estrella</h1>
